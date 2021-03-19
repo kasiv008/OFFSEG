@@ -1,0 +1,38 @@
+[ 
+  {
+    "hasInstances": True,
+    "category": "sky",
+    "catid": 1,
+    "name": "sky",
+    "ignoreInEval": False,
+    "id": 1,
+    "trainId": 0
+  },
+  {
+    "hasInstances": True,
+    "category": "traversible",
+    "catid": 2,
+    "name": "travarsable",
+    "ignoreInEval": False,
+    "id": 2,
+    "trainId": 1
+  },
+  {
+    "hasInstances": True,
+    "category": "Non-travarsable",
+    "catid": 3,
+    "name": "Non-travarsable",
+    "ignoreInEval": False,
+    "id": 3,
+    "trainId": 2
+  },
+  {
+    "hasInstances": True,
+    "category": "obstacle",
+    "catid": 4,
+    "name": "obstacle",
+    "ignoreInEval": False,
+    "id": 4,
+    "trainId": 3
+  },
+]
