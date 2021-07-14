@@ -1,4 +1,4 @@
-# OFFSEG
+# OFFSEG Official Implementation.
 Official implementation of "OFFSEG: A Semantic segmentation framework for Offroad-Driving"\
 For paper click [here](https://arxiv.org/abs/2103.12417)
 
