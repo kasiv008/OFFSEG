@@ -110,10 +110,9 @@ def mask_comb(newpool,img_lst,mask_class):
     return newpool
 
 def col_seg(image,pool,model):
-    dude=trav_cut(image,pool)
-    fck=palette_lst(dude)
-    this=mask_pred(fck,model)
-    return fck,this
+    plist=palette_lst(trav_cut(image,pool))
+    predictions=mask_pred(plist,model)
+    return plist,predictions
 
 
 parse = argparse.ArgumentParser()
@@ -133,19 +132,20 @@ to_tensor = T.ToTensor(
     mean=(0.3257, 0.3690, 0.3223), # city, rgb
     std=(0.2112, 0.2148, 0.2115),
 )
-image=cv2.imread('7543.jpg')
+image=cv2.imread(img_pth)
 im=image.copy()[:, :, ::-1]
-# for i in range(2):
+#fps recorder.
+# for i in range(100):
 # 	if i ==1:
 # 		start=time.time()
 # 	pool=img_seg(im,net)
-# 	pool1=pool.copy()
-# 	hey,you= col_seg(image,pool,model)
-# 	shit=mask_comb(pool1,hey,you)
+# 	pool_copy=pool.copy()
+# 	plist,predictions= col_seg(image,pool,model)
+# 	mask=mask_comb(pool_copy,plist,predictions)
 # end=time.time()
 # print((end-start)/99)
 pool=img_seg(im,net)
 pool1=pool.copy()
-hey,you= col_seg(image,pool,model)
-shit=mask_comb(pool1,hey,you)
-cv2.imwrite('res.png',pal[shit])
+plist,predictions= col_seg(image,pool,model)
+mask=mask_comb(pool1,plist,predictions)
+cv2.imwrite('res.png',pal[mask])
