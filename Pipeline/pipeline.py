@@ -75,7 +75,7 @@ def trav_cut(img,lpool):
     
 # save the image
     masked_img = cv2.cvtColor(image_bgra, cv2.COLOR_BGRA2BGR)
-    cv2.imwrite('msk.png',masked_img)
+    #cv2.imwrite('msk.png',masked_img)
     return masked_img
 
 
