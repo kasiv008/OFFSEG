@@ -1,6 +1,6 @@
 # OFFSEG Official Implementation.
 Official implementation of "OFFSEG: A Semantic segmentation framework for Offroad-Driving"\
-For paper click [here](https://arxiv.org/abs/2103.12417)
+For paper click [here](https://arxiv.org/abs/2103.12417). For sample video click [here](https://drive.google.com/drive/folders/1r7wsQMBsgJOwPNnP0I8DHEjxDEocsMGj?usp=sharing)
 
 
 Segmantation folder includes both BiSeNetV2 and HRNETV2+OCR used for training. The instructions for re-training is same as that of the respective main repositories.
