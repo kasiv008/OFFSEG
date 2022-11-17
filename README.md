@@ -11,7 +11,22 @@ The pipline is configured for RUGD dataset in the repository. The pipeline for R
 Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
 
 The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
-The repository is stll under updation. Stay tuned.
+## Updates
+  1. OFFSEG presented at the IEEE COnference on Automation Science and Enineering 2021, at Lyon France.
+  2. Our new work "CAMEL: Learning Cost-maps Made Easy for Off-road Driving" is available [here](https://sites.google.com/iiserb.ac.in/moonlab-camel/home).
 
+### I you find our work useful for your research, please do cite us:
+```latex
+@INPROCEEDINGS{9551643,
+  author={Viswanath, Kasi and Singh, Kartikeya and Jiang, Peng and Sujit, P.B. and Saripalli, Srikanth},
+  booktitle={2021 IEEE 17th International Conference on Automation Science and Engineering (CASE)}, 
+  title={OFFSEG: A Semantic Segmentation Framework For Off-Road Driving}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={354-359},
+  doi={10.1109/CASE49439.2021.9551643}}
+```
+The repository is stll under updation. Stay tuned.
 
 
