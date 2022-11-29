@@ -143,7 +143,7 @@ args = parse.parse_args()
 cfg = cfg_factory[args.model]
 
 #Load the classification Model
-model = tf.keras.models.load_model('/path/to/classification/model/keras_model.h5')
+model = tf.keras.models.load_model('../classification/model/keras_model.h5')
 
 #Loading Segmentation Model.
 net = model_factory[cfg.model_type](4)
@@ -163,7 +163,7 @@ for i in range(len(img_list)):
     im=image.copy()[:, :, ::-1]
     #image=cv2.resize(image,(1024,640))
     pred,pool =img_seg(im,net)
-    cv2.imwrite(os.path.join(final_path,img_list[i][:len(img_list[i])),pred)
+    cv2.imwrite(os.path.join(final_path,img_list[i][:len(img_list[i])]),pred)
     pool1=pool.copy()
     msk_img,predicts= col_seg(image,pool,model)
     final_pool=mask_comb(pool1,msk_img,predicts)
