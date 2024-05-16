@@ -10,3 +10,4 @@ tensorflow==2.6.2
 torch==1.9.0+cu111
 torchvision==0.10.0+cu111
 tqdm==4.62.3
+fast-pytorch-kmeans==0.2.0

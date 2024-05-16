@@ -19,6 +19,7 @@ import argparse
 torch.set_grad_enabled(False)
 import os
 from sklearn.cluster import KMeans
+from fast_pytorch_kmeans import KMeans
 
 import lib.transform_cv2 as T
 from lib.models import model_factory
@@ -27,6 +28,7 @@ from configs import cfg_factory
 np.random.seed(123)
 pal= np.random.randint(0, 256, (256, 3), dtype=np.uint8)
 
+#torch_kmeans = KMeans(n_clusters=4, mode='euclidean', verbose=1) # 4 classes
 #image path
 img_path='/path/to/Directory'
 #result path
@@ -49,12 +51,23 @@ def palette_lst(masked_img,n_classes=4):
     h,w=int(height),int(width)
     masked_img=cv2.resize(masked_img,(w,h))
     data = pd.DataFrame(masked_img.reshape(-1, 3),columns=['R', 'G', 'B'],dtype=np.float32)
-    print(type(data))
-    palette, data['Cluster']= kmeans_cuda(data, n_classes, verbosity=1, seed=1)
+    
+    ## Uncomment below code for GPU based Kmeans clustering.
+    #palette, data['Cluster']= kmeans_cuda(data, n_classes, verbosity=1, seed=1)
+
+    ## Uncomment below code for CPU based Kmeans clustering.
+     
 #     outp=KMeans(n_clusters=4,random_state=0).fit(data)
 #     print(outp)
 #     palette=outp.cluster_centers_
 #     data['Cluster']=outp.labels_
+
+    ## Uncomment below code for Pytorch based Kmeans clustering.
+    torch_kmeans = KMeans(n_clusters=n_classes, mode='euclidean', verbose=1)
+    input = torch.tensor(data)
+    data['Cluster'] = torch_kmeans.fit_predict(input).cpu().numpy()
+    palette = torch_kmeans.centroids.cpu().numpy() 
+
     palette_list = list()
     for color in palette:
         palette_list.append([[tuple(color)]])
