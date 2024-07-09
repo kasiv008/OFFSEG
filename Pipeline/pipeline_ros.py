@@ -175,7 +175,7 @@ to_tensor = T.ToTensor(
     std=(0.2112, 0.2148, 0.2115),
 )
 rospy.init_node("offseg")
-rospy.Subscriber("/mavs_ros/front_cams",Image, image_cb)
+rospy.Subscriber("/cam0/image_raw",Image, image_cb)
 while not rospy.is_shutdown():
     if not start_Flag:
         continue
