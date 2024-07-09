@@ -5,6 +5,7 @@ Created on Wed Feb 10 15:07:05 2021
 @author: KASI VISWANATH && KARTIKEYA SINGH
 """
 import cv2
+import rospy
 import sys
 import numpy as np
 import tensorflow as tf
@@ -20,6 +21,7 @@ torch.set_grad_enabled(False)
 import os
 from sklearn.cluster import KMeans
 from fast_pytorch_kmeans import KMeans
+from cv_bridge import CvBridge, CvBridgeError
 
 import lib.transform_cv2 as T
 from lib.models import model_factory
@@ -126,10 +128,6 @@ def mask_comb(newpool,img_lst,mask_class):
     for i in range(len(mask_class)):
         img=img_lst[i]
         ima=cv2.resize(img,(newpool.shape[1],newpool.shape[0]))
-        #ima=cv2.erode(ima,cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3)))
-        #im=cv2.erode(im,kernel,iterations=1)
-        #im=cv2.GaussianBlur(im,(3,3),1)        
-        #im=cv2.dilate(im,kernel,iterations=1)
         ima=cv2.cvtColor(ima.astype('float32'),cv2.COLOR_BGR2GRAY)
         ima[ima>0]=mask_class[i]
         bm=(mask_class[i]-ima)/mask_class[i]
@@ -154,6 +152,18 @@ cfg = cfg_factory[args.model]
 #Load the classification Model
 model = tf.keras.models.load_model('../classification/model/keras_model.h5')
 
+bridge = CvBridge()
+cv2_img = None
+start_Flag = False
+def image_cb(msg):
+    global cv2_img, start_Flag
+    try:
+        cv2_img = bridge.imgmsg_to_cv2(msg, "bgr8")
+        start_Flag = True
+    except CvBridgeError as e:
+        print(e)
+    pass
+
 #Loading Segmentation Model.
 net = model_factory[cfg.model_type](4)
 net.load_state_dict(torch.load(args.weight_path, map_location='cpu'))
@@ -164,16 +174,17 @@ to_tensor = T.ToTensor(
     mean=(0.3257, 0.3690, 0.3223), # city, rgb
     std=(0.2112, 0.2148, 0.2115),
 )
-img_list=sorted(os.listdir(img_path))
-#label_list=sorted(os.listdir(save_path))
-for i in range(len(img_list)):
-    image=cv2.imread(os.path.join(img_path,img_list[i]))
-    #pool=cv2.imread(os.path.join(save_path,label_list[i]))
-    im=image.copy()[:, :, ::-1]
+rospy.init_node("offseg")
+rospy.Subscriber("/mavs_ros/front_cams",Image, image_cb)
+while not rospy.is_shutdown():
+    if not start_Flag:
+        continue
+    im=cv2_img.copy()[:, :, ::-1]
     #image=cv2.resize(image,(1024,640))
     pred,pool =img_seg(im,net)
-    cv2.imwrite(os.path.join(final_path,img_list[i][:len(img_list[i])]),pred)
     pool1=pool.copy()
-    msk_img,predicts= col_seg(image,pool,model)
+    msk_img,predicts= col_seg(im,pool,model)
     final_pool=mask_comb(pool1,msk_img,predicts)
-    cv2.imwrite(os.path.join(final_path,img_list[i]),pal[final_pool])
+    cv2.imshow("image", pal(final_pool))
+    cv2.waitKey(1)
+cv2.destroyAllWindows()
