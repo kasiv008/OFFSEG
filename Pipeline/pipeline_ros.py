@@ -32,10 +32,6 @@ pal= np.random.randint(0, 256, (256, 3), dtype=np.uint8)
 
 #torch_kmeans = KMeans(n_clusters=4, mode='euclidean', verbose=1) # 4 classes
 #image path
-img_path='/path/to/Directory'
-#result path
-final_path='/path/to/Directory'
-#Path to Model save path.
 dataset='/path/to/Directory/model_final.pth'
 
 #Function for 4 calss image segmentation
