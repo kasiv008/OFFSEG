@@ -13,6 +13,8 @@ The pipline is configured for RUGD dataset in the repository.
 
 Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
 
+Run: Pipeline/pipeline.py to create masks
+
 The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
 
   1. TODO: Integrate the instance segmentations with LLM to generate reports.
