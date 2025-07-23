@@ -27,7 +27,7 @@ python Pipeline/pipeline.py
 
     Note: Pretrained weights on the RUGD dataset yielded robust results on custom datasets as well.
 
-🧠 Future Work
+🧠 TODO
 
     Integrate instance segmentations with LLMs to generate automated inspection reports.
 
