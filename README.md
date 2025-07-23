@@ -1,4 +1,4 @@
-# OFFSEG Official Implementation.
+# OFFSEG for Culvert Degradation
 Official implementation of "OFFSEG: A Semantic segmentation framework for Offroad-Driving"\
 For paper click [here](https://arxiv.org/abs/2103.12417). For sample video click [here](https://drive.google.com/drive/folders/1r7wsQMBsgJOwPNnP0I8DHEjxDEocsMGj?usp=sharing)
 
