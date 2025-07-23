@@ -9,7 +9,7 @@ For paper click [here](https://arxiv.org/abs/2103.12417). For sample video on RE
 <img width="1626" height="1176" alt="Screenshot from 2025-07-23 10-37-43" src="https://github.com/user-attachments/assets/872f014b-1460-464f-9c40-e1e5123ff134" />
 
 Segmantation folder includes both BiSeNetV2 and HRNETV2+OCR used for training. The instructions for re-training is same as that of the respective main repositories.
-The pipline is configured for RUGD dataset in the repository. The pipeline for Rellis-3D and custom dataset will be updated soon.
+The pipline is configured for RUGD dataset in the repository. 
 
 Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
 
