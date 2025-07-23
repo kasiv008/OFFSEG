@@ -1,36 +1,49 @@
-# OFFSEG for Culvert Degradation
-Official implementation of "OFFSEG: A Semantic segmentation framework for Offroad-Driving"\
-For paper click [here](https://arxiv.org/abs/2103.12417). For sample video on RELLIS-3d dataset click [here](https://drive.google.com/drive/folders/1r7wsQMBsgJOwPNnP0I8DHEjxDEocsMGj?usp=sharing)
+OFFSEG: A Semantic Segmentation Framework for Off-Road Driving
 
-## OFFSEG test on NYCC Inspection Report
+Official implementation of the paper:
+"OFFSEG: A Semantic Segmentation Framework for Off-Road Driving"
 
+    📄 Read the paper: arXiv Link
 
+    🎥 Watch sample video on RELLIS-3D: Google Drive
 
-<img width="1626" height="1176" alt="Screenshot from 2025-07-23 10-37-43" src="https://github.com/user-attachments/assets/872f014b-1460-464f-9c40-e1e5123ff134" />
+🚧 OFFSEG Applied to NYCC Inspection Reports
+<img width="1626" height="1176" alt="OFFSEG NYCC Demo" src="https://github.com/user-attachments/assets/872f014b-1460-464f-9c40-e1e5123ff134" />
+📁 Project Structure & Training
 
-Segmantation folder includes both BiSeNetV2 and HRNETV2+OCR used for training. The instructions for re-training is same as that of the respective main repositories.
-The pipline is configured for RUGD dataset in the repository. 
+    segmentation/: Contains implementations of BiSeNetV2 and HRNetV2+OCR used for training.
 
-Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
+    Pipelines configured for the RUGD dataset.
 
-Run: Pipeline/pipeline.py to create masks
+    For re-training, follow the instructions from the respective upstream repositories.
 
-The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
+🔗 Download pretrained weights:
+Google Drive Link
+▶️ Inference
 
-  1. TODO: Integrate the instance segmentations with LLM to generate reports.
+Run the following script to generate segmentation masks:
 
-##### I you find our work useful for your research, please do cite us:
-```latex
+python Pipeline/pipeline.py
+
+    Note: Pretrained weights on the RUGD dataset yielded robust results on custom datasets as well.
+
+🧠 Future Work
+
+    Integrate instance segmentations with LLMs to generate automated inspection reports.
+
+📚 Citation
+
+If you find this work useful, please cite us:
+
 @INPROCEEDINGS{9551643,
   author={Viswanath, Kasi and Singh, Kartikeya and Jiang, Peng and Sujit, P.B. and Saripalli, Srikanth},
   booktitle={2021 IEEE 17th International Conference on Automation Science and Engineering (CASE)}, 
   title={OFFSEG: A Semantic Segmentation Framework For Off-Road Driving}, 
   year={2021},
-  volume={},
-  number={},
   pages={354-359},
-  doi={10.1109/CASE49439.2021.9551643}}
-```
-The repository is stll under updation. Stay tuned.
+  doi={10.1109/CASE49439.2021.9551643}
+}
 
+⚠️ Disclaimer
 
+This repository is still under active development. Stay tuned for updates.
