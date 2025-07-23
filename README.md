@@ -14,8 +14,8 @@ Official implementation of the paper on custom dataset for culvert inspection:
 
     For re-training, follow the instructions from the respective upstream repositories.
 
-🔗 Download pretrained weights:
-Google Drive Link
+🔗 Download pretrained weights: [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
+
 ▶️ Inference
 
 Run the following script to generate segmentation masks:
