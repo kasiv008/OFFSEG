@@ -2,8 +2,11 @@
 Official implementation of "OFFSEG: A Semantic segmentation framework for Offroad-Driving"\
 For paper click [here](https://arxiv.org/abs/2103.12417). For sample video click [here](https://drive.google.com/drive/folders/1r7wsQMBsgJOwPNnP0I8DHEjxDEocsMGj?usp=sharing)
 
-## OFFSEG test on RELLIS-3D dataset.
-https://user-images.githubusercontent.com/62610515/179339717-317af19f-44d3-4271-9c78-f84b9326949e.mp4
+## OFFSEG test on NYCC Inspection Report
+
+
+
+<img width="1626" height="1176" alt="Screenshot from 2025-07-23 10-37-43" src="https://github.com/user-attachments/assets/872f014b-1460-464f-9c40-e1e5123ff134" />
 
 Segmantation folder includes both BiSeNetV2 and HRNETV2+OCR used for training. The instructions for re-training is same as that of the respective main repositories.
 The pipline is configured for RUGD dataset in the repository. The pipeline for Rellis-3D and custom dataset will be updated soon.
