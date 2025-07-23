@@ -1,6 +1,6 @@
 # OFFSEG for Culvert Degradation
 Official implementation of "OFFSEG: A Semantic segmentation framework for Offroad-Driving"\
-For paper click [here](https://arxiv.org/abs/2103.12417). For sample video click [here](https://drive.google.com/drive/folders/1r7wsQMBsgJOwPNnP0I8DHEjxDEocsMGj?usp=sharing)
+For paper click [here](https://arxiv.org/abs/2103.12417). For sample video on RELLIS-3d dataset click [here](https://drive.google.com/drive/folders/1r7wsQMBsgJOwPNnP0I8DHEjxDEocsMGj?usp=sharing)
 
 ## OFFSEG test on NYCC Inspection Report
 
