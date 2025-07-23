@@ -14,9 +14,8 @@ The pipline is configured for RUGD dataset in the repository. The pipeline for R
 Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
 
 The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
-## Updates
-  1. OFFSEG presented at the IEEE COnference on Automation Science and Enineering 2021, at Lyon France.
-  2. Our new work "CAMEL: Learning Cost-maps Made Easy for Off-road Driving" is available [here](https://sites.google.com/iiserb.ac.in/moonlab-camel/home).
+
+  1. TODO: Integrate the instance segmentations with LLM to generate reports.
 
 ##### I you find our work useful for your research, please do cite us:
 ```latex
