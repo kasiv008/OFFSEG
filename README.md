@@ -3,9 +3,6 @@ OFFSEG: A Semantic Segmentation Framework for Off-Road Driving
 Official implementation of the paper on custom dataset for culvert inspection:
 "OFFSEG: A Semantic Segmentation Framework for Off-Road Driving"
 
-    📄 Read the paper: arXiv Link
-
-    🎥 Watch sample video on RELLIS-3D: Google Drive
 
 🚧 OFFSEG Applied to NYCC Inspection Reports
 <img width="1626" height="1176" alt="OFFSEG NYCC Demo" src="https://github.com/user-attachments/assets/872f014b-1460-464f-9c40-e1e5123ff134" />
