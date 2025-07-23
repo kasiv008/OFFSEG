@@ -9,8 +9,11 @@ Segmantation folder includes both BiSeNetV2 and HRNETV2+OCR used for training. T
 The pipline is configured for RUGD dataset in the repository. The pipeline for Rellis-3D and custom dataset will be updated soon.
 
 Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
-
 The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
+
+## Checkout out [Degradation branch](https://github.com/kasiv008/OFFSEG/tree/Degradation-br). This work explores the use of offseg for instance segmentation detecting degradation on surfaces. 
+Offseg gave best results wth zero-shot implementation (Generalization!!).
+
 ## Updates
   1. OFFSEG presented at the IEEE COnference on Automation Science and Enineering 2021, at Lyon France.
   2. Our new work "CAMEL: Learning Cost-maps Made Easy for Off-road Driving" is available [here](https://sites.google.com/iiserb.ac.in/moonlab-camel/home).
