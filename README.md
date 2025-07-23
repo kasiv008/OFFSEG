@@ -11,7 +11,7 @@ The pipline is configured for RUGD dataset in the repository. The pipeline for R
 Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
 The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
 
-## Checkout out [Degradation branch](https://github.com/kasiv008/OFFSEG/tree/Degradation-br). This work explores the use of offseg for instance segmentation detecting degradation on surfaces. 
+### Checkout out [Degradation branch](https://github.com/kasiv008/OFFSEG/tree/Degradation-br). This work explores the use of offseg for instance segmentation detecting degradation on surfaces. 
 Offseg gave best results wth zero-shot implementation (Generalization!!).
 
 ## Updates
