@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/62610515/179339717-317af19f-44d3-4271-
 Segmantation folder includes both BiSeNetV2 and HRNETV2+OCR used for training. The instructions for re-training is same as that of the respective main repositories.
 The pipline is configured for RUGD dataset in the repository. The pipeline for Rellis-3D and custom dataset will be updated soon.
 
-Download pre-trained weights [here](https://drive.google.com/drive/folders/1v9xzKUjP-9ydOSIMFAOy4fAUMRcpo1r-?usp=sharing).
+Download pre-trained weights [here](https://drive.google.com/drive/folders/1a-DDJ0C6Q4Vfl5100pGQIbMCekD4xpV2?usp=sharing).
 The pretrained weights of RUGD dataset gave robust results from tests on custom dataset.\
 
 ### Checkout out [Degradation branch](https://github.com/kasiv008/OFFSEG/tree/Degradation-br). This work explores the use of offseg for instance segmentation detecting degradation on surfaces. 
